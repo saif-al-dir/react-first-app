@@ -3,7 +3,7 @@ import ColumnForm from '../ColumnForm/ColumnForm';
 import Column from '../Column/Column';
 import styles from './List.module.scss';
 
-const List = (props) => {
+const List = () => {
     const columns = useSelector(state => state.columns);
 
     return (
