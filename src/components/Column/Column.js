@@ -2,10 +2,10 @@ import Card from '../Card/Card';
 import { useSelector } from 'react-redux';
 import styles from './Column.module.scss';
 import CardForm from '../CardForm/CardForm';
+import { getFilteredCards } from '../../redux/store';
 
 const Column = (props) => {
-    const cards = useSelector(state => state.cards.filter(card =>
-        card.columnId === props.id));
+    const cards = useSelector(state => getFilteredCards(state, props.id));
 
     return (
         <div className={styles.column}>
