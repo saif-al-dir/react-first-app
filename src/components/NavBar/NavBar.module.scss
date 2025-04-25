@@ -29,6 +29,10 @@
     }
 
     li a:hover {
-        text-decoration: underline;
+        font-size: 0.8rem;
+    }
+
+    .linkActive {
+        color: $color-warning;
     }
 }
