@@ -5,14 +5,14 @@ import styles from './List.module.scss';
 import { getListById, getColumnsByList } from '../../redux/store';
 import { useParams } from 'react-router-dom';
 import SearchForm from '../SearchForm/SearchForm';
-// import { Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 const List = (props) => {
-    const { listId } = useParams;
+    const { listId } = useParams();
     const columns = useSelector(state => getColumnsByList(state, listId));
     const listData = useSelector(state => getListById(state, listId));
 
-    // if (listData) return <Navigate to="/" />;
+    if (listData) return <Navigate to="/" />;
 
     return (
         <div className={styles.list}>
